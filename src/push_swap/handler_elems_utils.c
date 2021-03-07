@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/07 01:40:07 by lmurray           #+#    #+#             */
-/*   Updated: 2021/03/07 03:11:24 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/03/07 22:53:50 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void		select_how_gotop(t_list **stack, int size_stack, int position)
 	int i;
 
 	i = 0;
-	if (i < (size_stack / 2))
+	if (position < (size_stack / 2))
 	{
 		while (i < position)
 		{
