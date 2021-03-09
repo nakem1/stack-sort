@@ -1,31 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_stack.c                                      :+:      :+:    :+:   */
+/*   ft_list_foreach_if.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/05 04:15:56 by lmurray           #+#    #+#             */
-/*   Updated: 2021/03/05 19:17:56 by lmurray          ###   ########.fr       */
+/*   Created: 2020/08/05 16:18:51 by lmurray           #+#    #+#             */
+/*   Updated: 2021/03/08 19:05:11 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "parse.h"
+#include "libft.h"
 
-int			check_stack(t_list *stack_a, t_list *stack_b)
+void	ft_list_foreach_if(t_list *begin_list, void (*f)(void *), void
+*data_ref, int (*cmp)(void *, void *))
 {
-	int		*tmp;
+	t_list *list_ptr;
 
-	if (stack_b != NULL)
-		return (1);
-	tmp = (int *)stack_a->content;
-	stack_a = stack_a->next;
-	while (stack_a)
+	list_ptr = begin_list;
+	while (list_ptr)
 	{
-		if (*tmp >= *((int *)stack_a->content))
-			return (1);
-		tmp = (int *)stack_a->content;
-		stack_a = stack_a->next;
+		if (!((*cmp)(list_ptr->content, data_ref)))
+		{
+			(*f)(list_ptr->content);
+		}
+		list_ptr = list_ptr->next;
 	}
-	return (0);
 }

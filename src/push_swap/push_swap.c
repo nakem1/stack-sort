@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/05 17:55:51 by lmurray           #+#    #+#             */
-/*   Updated: 2021/03/07 22:54:13 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/03/09 02:48:12 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,8 @@ void	push_swap(t_list *stack_a)
 			handle_three_elem(&stack_a);
 		else if (size_stack > 3 && size_stack < 100)
 			more_three_elem(&stack_a, &stack_b, size_stack);
-		// else if (size_stack >= 100 && size_stack < 500)
-		// 	more_hundred_elem(stack_a, stack_b);
+		else if (size_stack >= 100 && size_stack < 500)
+			more_hundred_elem(stack_a, stack_b, size_stack);
 		// else if (size_stack >= 500);
 		// 	more_five_hundred_elem(stack_a, stack_b);
 	}

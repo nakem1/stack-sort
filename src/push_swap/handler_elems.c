@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/05 19:05:51 by lmurray           #+#    #+#             */
-/*   Updated: 2021/03/07 03:09:07 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/03/09 01:54:42 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,21 @@
 
 void		handle_two_elem(t_list **stack_a)
 {
-	if (check_stack(*stack_a, NULL))
-		swap(stack_a, "sa\n");
+	int		*data;
+	t_list	*tmp;
+
+	data = (int *)(*stack_a)->content;
+	tmp = (*stack_a)->next;
+	while (stack_a)
+	{
+		if (*data >= *((int *)tmp->content))
+		{
+			swap(stack_a, "sa\n");
+			return ;
+		}
+		data = (int *)tmp->content;
+		tmp = tmp->next;
+	}
 }
 
 void		handle_three_elem_utils(t_list **stack)

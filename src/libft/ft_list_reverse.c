@@ -1,29 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_create_elem.c                                   :+:      :+:    :+:   */
+/*   ft_list_reverse.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/04 18:30:56 by lmurray           #+#    #+#             */
-/*   Updated: 2021/03/09 02:23:59 by lmurray          ###   ########.fr       */
+/*   Created: 2020/08/05 21:42:58 by lmurray           #+#    #+#             */
+/*   Updated: 2021/03/08 19:03:42 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_create_elem(void *content)
+void	ft_list_reverse(t_list **begin_list)
 {
-	t_list *tmp;
+	t_list *tmp_aft;
+	t_list *tmp_cur;
+	t_list *tmp_prev;
 
-	if (!(tmp = (t_list*)malloc(sizeof(t_list))))
-		return (NULL);
-	if (tmp)
+	tmp_prev = NULL;
+	tmp_cur = *begin_list;
+	while (tmp_cur)
 	{
-		tmp->content = content;
-		tmp->flag = 0;
-		tmp->index = 0;
-		tmp->next = NULL;
+		tmp_aft = tmp_cur->next;
+		tmp_cur->next = tmp_prev;
+		tmp_prev = tmp_cur;
+		tmp_cur = tmp_aft;
 	}
-	return (tmp);
+	*begin_list = tmp_prev;
 }

@@ -1,29 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_create_elem.c                                   :+:      :+:    :+:   */
+/*   ft_list_push_params.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/04 18:30:56 by lmurray           #+#    #+#             */
-/*   Updated: 2021/03/09 02:23:59 by lmurray          ###   ########.fr       */
+/*   Created: 2020/08/04 17:24:21 by lmurray           #+#    #+#             */
+/*   Updated: 2021/03/08 19:08:04 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_create_elem(void *content)
+t_list	*ft_list_push_params(int ac, char **av)
 {
-	t_list *tmp;
+	t_list	*tmp;
+	int		i;
 
-	if (!(tmp = (t_list*)malloc(sizeof(t_list))))
-		return (NULL);
-	if (tmp)
+	i = 0;
+	tmp = NULL;
+	while (i < ac)
 	{
-		tmp->content = content;
-		tmp->flag = 0;
-		tmp->index = 0;
-		tmp->next = NULL;
+		ft_list_push_front(&tmp, av[i]);
+		i++;
 	}
 	return (tmp);
 }

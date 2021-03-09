@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/07 01:40:07 by lmurray           #+#    #+#             */
-/*   Updated: 2021/03/07 22:53:50 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/03/09 01:29:32 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,37 @@ void		select_how_gotop(t_list **stack, int size_stack, int position)
 	}
 }
 
-void		stack_reduction(t_list **stack_a, t_list **stack_b, int *size_stack)
+void		find_min_dist(t_list **stack, int size_stack)
+{
+	int		i[2];
+	int		j;
+	int		k;
+	t_list	*tmp;
+
+	j = 0;
+	k = 0;
+	tmp = *stack;
+	while (tmp)
+	{
+		if (tmp->flag == 1)
+			i[j++] = k;
+		k++;
+		tmp = tmp->next;
+	}
+	if (i[0] <= (size_stack - i[1]))
+	{
+		tmp = ft_list_at(*stack, i[1]);
+		tmp->flag = 0;
+	}
+	else
+	{
+		tmp = ft_list_at(*stack, i[0]);
+		tmp->flag = 0;
+	}
+}
+
+void		stack_reduction(t_list **stack1, t_list **stack2, int *size_stack,
+		char *msg)
 {
 	int		i;
 	int		flag_find;
@@ -46,18 +76,19 @@ void		stack_reduction(t_list **stack_a, t_list **stack_b, int *size_stack)
 
 	i = 0;
 	flag_find = 0;
-	tmp = *stack_a;
+	find_min_dist(stack1, *size_stack);
+	tmp = *stack1;
 	while (flag_find != 1)
 	{
 		if (tmp->flag == 1)
 		{
-			select_how_gotop(stack_a, *size_stack, i);
+			select_how_gotop(stack1, *size_stack, i);
 			flag_find = 1;
 		}
 		i++;
 		tmp = tmp->next;
 	}
-	push(stack_a, stack_b, "pb\n");
-	print_list(*stack_a, *stack_b);
+	push(stack1, stack2, msg);
+	print_list(*stack1, *stack2);
 	*size_stack -= 1;
 }
