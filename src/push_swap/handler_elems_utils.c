@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/07 01:40:07 by lmurray           #+#    #+#             */
-/*   Updated: 2021/03/09 19:14:26 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/03/09 20:28:06 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ void		select_how_gotop(t_list **stack, int size_stack, int position)
 		}
 	}
 }
-
+// когда один флаг, то зануляет его
 void		find_min_dist(t_list **stack, int size_stack)
 {
 	int		i[2];
@@ -73,19 +73,19 @@ void		stack_reduction(t_list **stack1, t_list **stack2, int *size_stack,
 	int		i;
 	int		flag_find;
 	t_list	*tmp;
-	// t_list	*temp;
+	t_list	*temp;
 
 	i = 0;
 	flag_find = 0;
 	find_min_dist(stack1, *size_stack);
 	tmp = *stack1;
-	// temp = *stack1;
-	// while (temp)
-	// {
-	// 	printf("%d = [%d]\n", *(int *)temp->content, temp->flag);
-	// 	temp = temp->next;
-	// }
-	// print_list(*stack1, *stack2);
+	temp = *stack1;
+	while (temp)
+	{
+		printf("%d = [%d]\n", *(int *)temp->content, temp->flag);
+		temp = temp->next;
+	}
+	print_list(*stack1, *stack2);
 	while (flag_find != 1)
 	{
 		if (tmp->flag == 1)
