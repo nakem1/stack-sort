@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/05 17:56:41 by lmurray           #+#    #+#             */
-/*   Updated: 2021/03/09 02:12:38 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/03/09 18:07:32 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,11 @@ void	more_three_elem(t_list **stack_a, t_list **stack_b, int size_stack);
 void	stack_reduction(t_list **stack_a, t_list **stack_b, int *size_stack,
 		char *msg);
 void	select_how_gotop(t_list **stack, int size_stack, int position);
+void	set_index(t_list **stack_a, int size_stack);
+int		*get_heaps(int size_stack);
+void	reset_flag(t_list **stack);
+void	find_optimal(int *heaps, t_list **stack_a);
+void	find_minmax(t_list **stack, int minmax);
 
+void	more_hundred_elem(t_list **stack_a, t_list **stack_b, int size_stack);
 #endif

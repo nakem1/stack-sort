@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 17:42:04 by lmurray           #+#    #+#             */
-/*   Updated: 2021/03/09 03:11:51 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/03/09 18:31:40 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,12 +47,4 @@ void		push(t_list **src, t_list **dest, char *msg)
 // 	ft_list_push_back(&b, &arr1[2]);
 // 	ft_list_push_back(&b, &arr1[3]);
 // 	ft_list_push_back(&b, &arr1[4]);
-// 	print_list(a);
-// 	print_list(b);
-// 	push(&a, &b);
-// 	print_list(a);
-// 	print_list(b);
-// 	// push(&b, &a);
-// 	// print_list(a);
-// 	// print_list(b);
 // }

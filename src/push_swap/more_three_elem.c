@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/06 22:34:35 by lmurray           #+#    #+#             */
-/*   Updated: 2021/03/09 02:43:10 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/03/09 18:31:31 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,12 +30,12 @@ void		astack_recovery(t_list **stack_a, t_list **stack_b)
 	while (*stack_b != NULL)
 	{
 		push(stack_b, stack_a, "pa\n");
-		print_list(*stack_a, *stack_b);
+		// print_list(*stack_a, *stack_b);
 		if ((*(int *)((*stack_a)->content)) >
 				(*(int *)((*stack_a)->next->next->next->content)))
 		{
 			rotate(stack_a, "ra\n");
-			print_list(*stack_a, *stack_b);
+			// print_list(*stack_a, *stack_b);
 		}
 	}
 }

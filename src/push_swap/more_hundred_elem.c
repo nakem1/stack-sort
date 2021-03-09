@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/08 21:20:19 by lmurray           #+#    #+#             */
-/*   Updated: 2021/03/09 03:28:34 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/03/09 19:00:46 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,14 +56,28 @@ void		set_index(t_list **stack_a, int size_stack)
 	}
 }
 
-int			*get_heaps(int size_stack);
+int			*get_heaps(int size_stack)
+{
+	int		*heaps;
+	int		size_one_heap;
+
+	heaps = (int *)malloc(sizeof(int) * 6);
+	size_one_heap = size_stack / 5;
+	heaps[0] = 0;
+	heaps[1] = size_one_heap;
+	heaps[2] = size_one_heap * 2;
+	heaps[3] = size_one_heap * 3;
+	heaps[4] = size_one_heap * 4;
+	heaps[5] = size_stack;
+	return (heaps);
+}
 
 void		more_hundred_elem(t_list **stack_a, t_list **stack_b,
 		int size_stack)
 {
-	int		heaps[5];
+	int		*heaps;
 
-	set_index(stack_a, int size_stack);
+	set_index(stack_a, size_stack);
 	heaps = get_heaps(size_stack);
 	while (size_stack != 0)
 	{

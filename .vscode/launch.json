@@ -1,0 +1,63 @@
+// {
+// 	"version": "0.2.0",
+// 	"configurations":
+// 	[
+// 		{
+// 			"name": "(lldb) Запустить",
+// 			"type": "lldb",
+// 			"request": "launch",
+// 			"program": "${workspaceFolder}/push_swap",
+// 			"args": 
+// 			[
+// 				"1",
+// 				"5",
+// 				"2",
+// 				"4",
+// 				"3",
+
+// 			],
+// 			"stopAtEntry": false,
+// 			"cwd": "${workspaceFolder}",
+// 			"environment": [ { "name": "squid", "value": "clam" } ],
+// 			"externalConsole": false,
+// 			"MIMode": "lldb"
+// 		},
+// 		{
+// 			"name": "(lldb) Подключить",
+// 			"type": "lldb",
+// 			"request": "attach",
+// 			"program": "${workspaceFolder}/push_swap}",
+// 			"processId": "${command:pickProcess}",
+// 			"MIMode": "lldb"
+// 		}
+// 	]
+// }
+
+{
+	"version": "0.2.0",
+	"configurations":
+	[
+		{
+			"name": "(lldb) Запустить",
+			"type": "lldb",
+			"request": "launch",
+			"program": "${workspaceFolder}/push_swap",
+			"args": 
+			[
+			],
+			"stopAtEntry": false,
+			"cwd": "${workspaceFolder}",
+			"environment": [ { "name": "squid", "value": "clam" } ],
+			"externalConsole": false,
+			"MIMode": "lldb"
+		},
+		{
+			"name": "(lldb) Подключить",
+			"type": "lldb",
+			"request": "attach",
+			"program": "${workspaceFolder}/push_swap}",
+			"processId": "${command:pickProcess}",
+			"MIMode": "lldb"
+		}
+	]
+}
