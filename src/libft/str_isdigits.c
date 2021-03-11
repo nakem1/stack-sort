@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 21:31:00 by lmurray           #+#    #+#             */
-/*   Updated: 2021/03/03 21:34:24 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/03/11 05:13:47 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,10 @@ int		str_isdigits(char *str)
 {
 	int i;
 
-	i = 0;
+	if (str[0] == '-')
+		i = 1;
+	else
+		i = 0;
 	while (str[i] != '\0')
 	{
 		if (!ft_isdigit(str[i]))

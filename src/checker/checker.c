@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 20:36:32 by lmurray           #+#    #+#             */
-/*   Updated: 2021/03/05 19:16:33 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/03/11 00:22:08 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,22 +15,22 @@
 void	handle_rotate(char *str, t_list **stack_a, t_list **stack_b)
 {
 	if (!ft_strcmp(str, "ra"))
-		rotate(stack_a);
+		rotate(stack_a, NULL);
 	else if (!ft_strcmp(str, "rb"))
-		rotate(stack_b);
+		rotate(stack_b, NULL);
 	else if (!ft_strcmp(str, "rr"))
 	{
-		rotate(stack_a);
-		rotate(stack_b);
+		rotate(stack_a, NULL);
+		rotate(stack_b, NULL);
 	}
 	else if (!ft_strcmp(str, "rra"))
-		reverse_rotate(stack_a);
+		reverse_rotate(stack_a, NULL);
 	else if (!ft_strcmp(str, "rrb"))
-		reverse_rotate(stack_b);
+		reverse_rotate(stack_b, NULL);
 	else if (!ft_strcmp(str, "rrr"))
 	{
-		reverse_rotate(stack_a);
-		reverse_rotate(stack_b);
+		reverse_rotate(stack_a, NULL);
+		reverse_rotate(stack_b, NULL);
 	}
 	else
 		stop_program(1);
@@ -39,18 +39,18 @@ void	handle_rotate(char *str, t_list **stack_a, t_list **stack_b)
 void	set_command_tostack(char *str, t_list **stack_a, t_list **stack_b)
 {
 	if (!ft_strcmp(str, "sa"))
-		swap(stack_a);
+		swap(stack_a, NULL);
 	else if (!ft_strcmp(str, "sb"))
-		swap(stack_b);
+		swap(stack_b, NULL);
 	else if (!ft_strcmp(str, "ss"))
 	{
-		swap(stack_a);
-		swap(stack_b);
+		swap(stack_a, NULL);
+		swap(stack_b, NULL);
 	}
 	else if (!ft_strcmp(str, "pa"))
-		push(stack_b, stack_a);
+		push(stack_b, stack_a, NULL);
 	else if (!ft_strcmp(str, "pb"))
-		push(stack_a, stack_b);
+		push(stack_a, stack_b, NULL);
 	else
 		handle_rotate(str, stack_a, stack_b);
 }

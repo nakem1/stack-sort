@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 20:31:04 by lmurray           #+#    #+#             */
-/*   Updated: 2021/03/07 03:08:24 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/03/10 01:26:29 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,9 @@ void	print_list(t_list *list, t_list *list1)
 	{
 		if (list && list1)
 		{
-			printf("|     [%d] = %d     ||     [%d] = %d     |\n", i++,
-					(*(int *)(list->content)), j++, (*(int *)(list1->content)));
+			printf("|     [%d] = %d     ||     [%d] = %d     ||     [%d]     |\n", i++,
+					(*(int *)(list->content)), j++, (*(int *)(list1->content)),
+					list1->index);
 			list = list->next;
 			list1 = list1->next;
 
@@ -40,8 +41,8 @@ void	print_list(t_list *list, t_list *list1)
 		}
 		else if (list1)
 		{
-			printf("|                   ||     [%d] = %d     |\n",
-					j++, (*(int *)(list1->content)));
+			printf("|                   ||     [%d] = %d     ||     [%d]     |\n",
+					j++, (*(int *)(list1->content)), list1->index);
 		list1 = list1->next;
 		}
 	}

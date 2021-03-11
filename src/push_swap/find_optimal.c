@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/09 15:14:41 by lmurray           #+#    #+#             */
-/*   Updated: 2021/03/09 20:07:31 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/03/11 02:09:16 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,23 +28,19 @@ void		find_optimal_min(int *heaps, int i, t_list **stack_a)
 	}
 }
 
-void		find_optimal(int *heaps, t_list **stack_a)
+void		find_optimal(int *heaps, int size_heaps, t_list **stack_a)
 {
-	static int		var;
 	t_list		*tmp;
 	t_list		*max;
 	int			i;
 	int			j;
 
-	printf("____________STATIC___________ = %d\n", var);
-	var++;
 	i = 0;
 	max = NULL;
-	while (i < 5)
+	while (i < size_heaps)
 	{
 		j = 0;
 		tmp = *stack_a;
-		print_list(*stack_a, NULL);
 		find_optimal_min(heaps, i, stack_a);
 		while (tmp)
 		{

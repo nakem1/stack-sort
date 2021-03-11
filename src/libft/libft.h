@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/30 02:59:31 by lmurray           #+#    #+#             */
-/*   Updated: 2021/03/09 03:13:29 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/03/11 04:39:54 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,7 @@ size_t				ft_strlcat(char *dst, const char *src, size_t dstsize);
 void				*ft_calloc(size_t count, size_t size);
 
 int					ft_atoi(const char *str);
+long				ft_atoi_long(const char *str);
 int					ft_isalpha(int c);
 int					ft_isdigit(int c);
 int					ft_isalnum(int c);

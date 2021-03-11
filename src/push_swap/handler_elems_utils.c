@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/07 01:40:07 by lmurray           #+#    #+#             */
-/*   Updated: 2021/03/09 20:28:06 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/03/11 00:56:32 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,27 +17,48 @@ void		select_how_gotop(t_list **stack, int size_stack, int position)
 	int i;
 
 	i = 0;
-	if (position < (size_stack / 2))
+	if (size_stack != 1)
 	{
-		while (i < position)
+		if (position < (size_stack / 2))
 		{
-			rotate(stack, "ra\n");
-			// print_list(*stack, NULL);
-			i++;
+			while (i < position)
+			{
+				rotate(stack, "ra\n");
+				// print_list(*stack, NULL);
+				i++;
+			}
 		}
-	}
-	else
-	{
-		i = position;
-		while (i < size_stack)
+		else
 		{
-			reverse_rotate(stack, "rra\n");
-			// print_list(*stack, NULL);
-			i++;
+			i = position;
+			while (i < size_stack)
+			{
+				reverse_rotate(stack, "rra\n");
+				// print_list(*stack, NULL);
+				i++;
+			}
 		}
 	}
 }
-// когда один флаг, то зануляет его
+
+int			check_one_flag(t_list **stack)
+{
+	int		count;
+	t_list	*tmp;
+
+	count = 0;
+	tmp = *stack;
+	while (tmp)
+	{
+		if (tmp->flag)
+			count++;
+		tmp = tmp->next;
+	}
+	if (count == 1)
+		return (1);
+	return (0);
+}
+
 void		find_min_dist(t_list **stack, int size_stack)
 {
 	int		i[2];
@@ -48,6 +69,8 @@ void		find_min_dist(t_list **stack, int size_stack)
 	j = 0;
 	k = 0;
 	tmp = *stack;
+	if (check_one_flag(stack))
+		return ;
 	while (tmp)
 	{
 		if (tmp->flag == 1)
@@ -73,19 +96,11 @@ void		stack_reduction(t_list **stack1, t_list **stack2, int *size_stack,
 	int		i;
 	int		flag_find;
 	t_list	*tmp;
-	t_list	*temp;
 
 	i = 0;
 	flag_find = 0;
 	find_min_dist(stack1, *size_stack);
 	tmp = *stack1;
-	temp = *stack1;
-	while (temp)
-	{
-		printf("%d = [%d]\n", *(int *)temp->content, temp->flag);
-		temp = temp->next;
-	}
-	print_list(*stack1, *stack2);
 	while (flag_find != 1)
 	{
 		if (tmp->flag == 1)
@@ -97,6 +112,5 @@ void		stack_reduction(t_list **stack1, t_list **stack2, int *size_stack,
 		tmp = tmp->next;
 	}
 	push(stack1, stack2, msg);
-	// print_list(*stack1, *stack2);
 	*size_stack -= 1;
 }
