@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/08 21:20:19 by lmurray           #+#    #+#             */
-/*   Updated: 2021/03/11 06:59:42 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/03/11 17:28:52 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,8 @@ int			*get_heaps(int size_stack, int size_heaps)
 	int		i;
 
 	i = 1;
-	heaps = (int *)malloc(sizeof(int) * size_heaps + 1);
+	if (!(heaps = (int *)malloc(sizeof(int) * size_heaps + 1)))
+		return (NULL);
 	size_one_heap = size_stack / size_heaps;
 	heaps[0] = 0;
 	while (i < size_heaps)
@@ -92,6 +93,7 @@ void		more_hundred_elem(t_list **stack_a, t_list **stack_b,
 		find_optimal(heaps, size_heaps, stack_a);
 		stack_reduction(stack_a, stack_b, &size_stack, A_STACK);
 	}
+	free(heaps);
 	size_stack = ft_list_size(*stack_b);
 	while (size_stack != 0)
 	{

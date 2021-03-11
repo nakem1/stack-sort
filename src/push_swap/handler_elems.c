@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/05 19:05:51 by lmurray           #+#    #+#             */
-/*   Updated: 2021/03/11 06:57:45 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/03/11 15:00:27 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,8 +45,6 @@ void		handle_three_elem_utils(t_list **stack)
 			&& (*(int *)((*stack)->next->next->content) < \
 			*(int *)((*stack)->content)))
 		reverse_rotate(stack, "rra\n");
-	else
-		ft_putstr_fd("kek trouble\n", 1);
 }
 
 void		handle_three_elem(t_list **stack)
@@ -55,7 +53,7 @@ void		handle_three_elem(t_list **stack)
 			(*(int *)((*stack)->next->next->content) > \
 			*(int *)((*stack)->content)))
 	{
-		swap(stack, "sa");
+		swap(stack, "sa\n");
 	}
 	else if ((*(int *)((*stack)->content) > *(int *)((*stack)->next->content))
 			&& (*(int *)((*stack)->next->next->content) < \

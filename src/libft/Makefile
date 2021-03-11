@@ -1,5 +1,5 @@
 
-FLAGS = -Wall -Werror -Wextra -I. -c
+FLAGS = -g3 -Wall -Werror -Wextra -I. -c
 
 LIB = ar rcs
 
@@ -41,52 +41,45 @@ SRC = ft_memset.c \
 	ft_strlcpy.c \
 	ft_strlcat.c \
 	ft_memmove.c \
-	ft_skip_spaces.c \
-	ft_skip_spaces_comma.c \
 	ft_strcmp.c \
 	ft_strlen_int.c \
 	get_next_line.c \
 	only_digits_comma.c \
 	only_digits_ln.c \
 	get_stack.c \
-	str_isdigit.c
-
-
-SRC_BONUS = ft_lstnew.c \
-			ft_lstadd_front.c \
-			ft_lstsize.c \
-			ft_lstlast.c \
-			ft_lstadd_back.c \
-			ft_lstdelone.c \
-			ft_lstiter.c \
-			ft_lstclear.c \
-			ft_lstmap.c
-
+	str_isdigits.c \
+	ft_list_push_back.c \
+	ft_create_elem.c \
+	ft_lstnew.c \
+	ft_lstadd_front.c \
+	ft_lstsize.c \
+	ft_lstlast.c \
+	ft_lstadd_back.c \
+	ft_lstdelone.c \
+	ft_lstiter.c \
+	ft_lstclear.c \
+	ft_lstmap.c \
+	ft_atoi_long.c \
+	ft_list_size.c \
+	ft_list_at.c \
+	ft_list_clear.c
 
 OBJ = $(SRC:.c=.o)
-
-OBJ_BONUS = $(SRC_BONUS:.c=.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	$(LIB) $(NAME) $(OBJ)
+	@$(LIB) $(NAME) $(OBJ)
 
 $(OBJ): $(SRC)
-	gcc $(FLAGS) $(SRC)
-
-$(OBJ_BONUS): $(SRC_BONUS)
-	gcc $(FLAGS) $(SRC_BONUS)
+	@gcc $(FLAGS) $(SRC)
 
 clean:
-	rm -f $(OBJ) $(OBJ_BONUS)
+	@rm -f $(OBJ) $(OBJ_BONUS)
 
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
 
 re: fclean all
-
-bonus: $(OBJ) $(OBJ_BONUS)
-	$(LIB) $(NAME) $(OBJ_BONUS)
 
 .PHONY: clean fclean all re bonus

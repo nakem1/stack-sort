@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 20:55:49 by lmurray           #+#    #+#             */
-/*   Updated: 2021/03/11 06:58:46 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/03/11 15:59:46 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,6 +78,7 @@ int		check_overflow(int argc, char **argv)
 		else
 			return (1);
 	}
+	free(digits_long);
 	return (0);
 }
 
