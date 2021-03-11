@@ -41,7 +41,7 @@
 			"name": "(lldb) Запустить",
 			"type": "lldb",
 			"request": "launch",
-			"program": "${workspaceFolder}/checker",
+			"program": "${workspaceFolder}/push_swap",
 			"args": 
 			[
 				"37",
@@ -155,7 +155,7 @@
 			"name": "(lldb) Подключить",
 			"type": "lldb",
 			"request": "attach",
-			"program": "${workspaceFolder}/checker}",
+			"program": "${workspaceFolder}/push_swap}",
 			"processId": "${command:pickProcess}",
 			"MIMode": "lldb"
 		}

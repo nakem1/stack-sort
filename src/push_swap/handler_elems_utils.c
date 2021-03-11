@@ -6,13 +6,14 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/07 01:40:07 by lmurray           #+#    #+#             */
-/*   Updated: 2021/03/11 00:56:32 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/03/11 07:05:28 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void		select_how_gotop(t_list **stack, int size_stack, int position)
+void		select_how_gotop(t_list **stack, int size_stack, int position,
+		int msg)
 {
 	int i;
 
@@ -23,8 +24,7 @@ void		select_how_gotop(t_list **stack, int size_stack, int position)
 		{
 			while (i < position)
 			{
-				rotate(stack, "ra\n");
-				// print_list(*stack, NULL);
+				rotate(stack, ROTATE_STACK(msg));
 				i++;
 			}
 		}
@@ -33,8 +33,7 @@ void		select_how_gotop(t_list **stack, int size_stack, int position)
 			i = position;
 			while (i < size_stack)
 			{
-				reverse_rotate(stack, "rra\n");
-				// print_list(*stack, NULL);
+				reverse_rotate(stack, REV_ROTATE_STACK(msg));
 				i++;
 			}
 		}
@@ -69,8 +68,6 @@ void		find_min_dist(t_list **stack, int size_stack)
 	j = 0;
 	k = 0;
 	tmp = *stack;
-	if (check_one_flag(stack))
-		return ;
 	while (tmp)
 	{
 		if (tmp->flag == 1)
@@ -91,7 +88,7 @@ void		find_min_dist(t_list **stack, int size_stack)
 }
 
 void		stack_reduction(t_list **stack1, t_list **stack2, int *size_stack,
-		char *msg)
+		int msg)
 {
 	int		i;
 	int		flag_find;
@@ -99,18 +96,19 @@ void		stack_reduction(t_list **stack1, t_list **stack2, int *size_stack,
 
 	i = 0;
 	flag_find = 0;
-	find_min_dist(stack1, *size_stack);
+	if (!check_one_flag(stack1))
+		find_min_dist(stack1, *size_stack);
 	tmp = *stack1;
 	while (flag_find != 1)
 	{
 		if (tmp->flag == 1)
 		{
-			select_how_gotop(stack1, *size_stack, i);
+			select_how_gotop(stack1, *size_stack, i, msg);
 			flag_find = 1;
 		}
 		i++;
 		tmp = tmp->next;
 	}
-	push(stack1, stack2, msg);
+	push(stack1, stack2, PUSH_STACK(msg));
 	*size_stack -= 1;
 }

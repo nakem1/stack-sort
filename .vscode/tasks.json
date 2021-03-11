@@ -6,8 +6,8 @@
 		{
 			"label": "echo",
 			"type": "shell",
-			"command": "gcc -Wall -Wextra -Werror -g3 -o checker src/checker/*.c src/libft/*.c src/operations/*.c src/parse/*.c",
-			//  "command": "gcc -Wall -Wextra -Werror -o push_swap -g3 src/push_swap/*.c src/operations/*.c src/libft/*.c src/parse/*.c",
+			// "command": "gcc -Wall -Wextra -Werror -g3 -o checker src/checker/*.c src/libft/*.c src/operations/*.c src/parse/*.c",
+			"command": "gcc -Wall -Wextra -Werror -o push_swap -g3 src/push_swap/*.c src/operations/*.c src/libft/*.c src/parse/*.c",
 			//  "command": "./push_swap 124 134 150 129 191 107 108 105 115 160 173 187 145 170 169 200 106 112 196 144 174 159 128 194 199 138 193 101 121 189 114 163 132 156 110 148 155 139 190 111 102 146 135 147 162 195 122 137 140 158 103 154 116 166 182 161 120 192 104 118 100 131 117 149 164 125 143 133 153 119 188 142 180 186 178 167 179 171 126 172 198 113 152 123 109 136 181 165 157 175 185 151 176 141 130 177 184 168 127 197 | grep -e \"pa\" -e \"sa\" -e \"pb\" -e \"sb\" -e \"ra\" -e \"rb\" -e \"rra\" -e \"rrb\" | wc -l"
 			"group": {
 				"kind": "build",

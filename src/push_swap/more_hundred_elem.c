@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/08 21:20:19 by lmurray           #+#    #+#             */
-/*   Updated: 2021/03/11 02:45:51 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/03/11 06:59:42 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,14 +90,13 @@ void		more_hundred_elem(t_list **stack_a, t_list **stack_b,
 	{
 		reset_flag(stack_a);
 		find_optimal(heaps, size_heaps, stack_a);
-		stack_reduction(stack_a, stack_b, &size_stack, "pb\n");
+		stack_reduction(stack_a, stack_b, &size_stack, A_STACK);
 	}
-	// print_list(*stack_a, *stack_b);
 	size_stack = ft_list_size(*stack_b);
 	while (size_stack != 0)
 	{
 		reset_flag(stack_b);
 		find_minmax(stack_b, MAX);
-		stack_reduction(stack_b, stack_a, &size_stack, "pa\n");
+		stack_reduction(stack_b, stack_a, &size_stack, B_STACK);
 	}
 }

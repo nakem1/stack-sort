@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/05 19:05:51 by lmurray           #+#    #+#             */
-/*   Updated: 2021/03/09 18:31:35 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/03/11 06:57:45 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,6 @@ void		handle_three_elem_utils(t_list **stack)
 			*(int *)((*stack)->next->content)))
 	{
 		swap(stack, "sa\n");
-		// print_list(*stack, NULL);
 		rotate(stack, "ra\n");
 	}
 	else if ((*(int *)((*stack)->content) < *(int *)((*stack)->next->content))
@@ -57,16 +56,13 @@ void		handle_three_elem(t_list **stack)
 			*(int *)((*stack)->content)))
 	{
 		swap(stack, "sa");
-		// print_list(*stack, NULL);
 	}
 	else if ((*(int *)((*stack)->content) > *(int *)((*stack)->next->content))
 			&& (*(int *)((*stack)->next->next->content) < \
 			*(int *)((*stack)->next->content)))
 	{
 		swap(stack, "sa\n");
-		// print_list(*stack, NULL);
 		reverse_rotate(stack, "rra\n");
-		// print_list(*stack, NULL);
 	}
 	else if ((*(int *)((*stack)->content) >
 			*(int *)((*stack)->next->next->content))
@@ -74,11 +70,7 @@ void		handle_three_elem(t_list **stack)
 			*(int *)((*stack)->next->content)))
 	{
 		rotate(stack, "ra\n");
-		// print_list(*stack, NULL);
 	}
 	else
-	{
 		handle_three_elem_utils(stack);
-		// print_list(*stack, NULL);
-	}
 }

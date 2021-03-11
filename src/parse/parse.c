@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 20:55:49 by lmurray           #+#    #+#             */
-/*   Updated: 2021/03/11 04:51:49 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/03/11 06:58:46 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int		check_stack(t_list *stack_a, t_list *stack_b)
 		if (*(int *)stack_a->content > *(int *)stack_a->next->content)
 			return (1);
 		stack_a = stack_a->next;
-	}	
+	}
 	return (0);
 }
 
@@ -72,7 +72,8 @@ int		check_overflow(int argc, char **argv)
 		if (ft_strlen(argv[i]) > 11)
 			return (1);
 		digits_long[i - 1] = ft_atoi_long(argv[i]);
-		if (digits_long[i - 1] <= 2147483647 && digits_long[i - 1] >= -2147483648)
+		if (digits_long[i - 1] <= 2147483647 &&
+				digits_long[i - 1] >= -2147483648)
 			i++;
 		else
 			return (1);
