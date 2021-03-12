@@ -30,7 +30,7 @@
 		{
 			"label": "make",
 			"type": "shell",
-			"command": "make re",
+			"command": "make",
 			"group": "build"
 		}
 	]

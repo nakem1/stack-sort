@@ -197,8 +197,6 @@ echo ${WHITE}"GOOD"${CLN};
 
 if [ ${LOOPSCOUNT} -gt 1 ]; then
     echo "sorting:          ${SORTCOUNTEROK} OK / ${SORTCOUNTERKO} KO";
-    echo "max (operations): ${MAXNUMBER}";
-    echo "min (operations): ${MINNUMBER}";
     echo "med (operations): $((MEDIUM/LOOPSCOUNT))"
 fi
 exit 0

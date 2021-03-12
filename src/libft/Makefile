@@ -75,7 +75,7 @@ $(OBJ): $(SRC)
 	@gcc $(FLAGS) $(SRC)
 
 clean:
-	@rm -f $(OBJ) $(OBJ_BONUS)
+	@rm -f $(OBJ)
 
 fclean: clean
 	@rm -f $(NAME)
