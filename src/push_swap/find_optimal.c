@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/09 15:14:41 by lmurray           #+#    #+#             */
-/*   Updated: 2021/03/11 07:01:53 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/03/12 21:40:02 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@ void		find_optimal_min(int *heaps, int i, t_list **stack_a)
 	tmp = *stack_a;
 	while (tmp)
 	{
-		if (tmp->index > heaps[i] && tmp->index < heaps[i + 1])
+		if (tmp->index > heaps[i] && tmp->index < heaps[i + 1] &&
+				tmp->flag == 0)
 		{
 			tmp->flag = 1;
 			return ;
@@ -42,7 +43,8 @@ void		find_optimal(int *heaps, int size_heaps, t_list **stack_a)
 		find_optimal_min(heaps, i, stack_a);
 		while (tmp)
 		{
-			if (tmp->index >= heaps[i] && tmp->index < heaps[i + 1])
+			if (tmp->index >= heaps[i] && tmp->index < heaps[i + 1] &&
+					tmp->flag == 0)
 				max = tmp;
 			tmp = tmp->next;
 		}

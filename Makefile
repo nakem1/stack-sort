@@ -5,12 +5,12 @@
 #                                                     +:+ +:+         +:+      #
 #    By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/03/11 08:16:48 by lmurray           #+#    #+#              #
-#    Updated: 2021/03/11 20:48:40 by lmurray          ###   ########.fr        #
+#    Created: 2021/03/12 20:04:19 by lmurray           #+#    #+#              #
+#    Updated: 2021/03/13 06:31:13 by lmurray          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-GCC = gcc
+GCC = gcc -g3
 CH=	checker
 PS=	push_swap
 LIBFT = ./src/libft/libft.a
@@ -20,7 +20,8 @@ SRC_PS = ./src/push_swap/find_optimal.c ./src/push_swap/handler_elems.c \
 		./src/push_swap/handler_elems_utils.c \
 		./src/push_swap/more_five_hundred_elem.c \
 		./src/push_swap/more_hundred_elem.c \
-		./src/push_swap/more_three_elem.c ./src/push_swap/push_swap.c
+		./src/push_swap/more_three_elem.c ./src/push_swap/push_swap.c \
+		./src/push_swap/optimization.c
 
 SRC = ./src/operations/push.c ./src/operations/reverse_rotate.c \
 		./src/operations/rotate.c ./src/operations/swap.c ./src/parse/parse.c

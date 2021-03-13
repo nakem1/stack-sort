@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/05 17:55:51 by lmurray           #+#    #+#             */
-/*   Updated: 2021/03/11 22:51:07 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/03/13 07:45:24 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void	push_swap(t_list **stack_a)
 			more_five_hundred_elem(stack_a, &stack_b, size_stack);
 	}
 }
-
+// проверить дебаггером на малых числах алгоритм. И закончить проект
 int		main(int argc, char **argv)
 {
 	int		*digits;
