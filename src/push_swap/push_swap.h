@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/05 17:56:41 by lmurray           #+#    #+#             */
-/*   Updated: 2021/03/13 06:16:34 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/03/14 06:19:59 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@
 void	handle_three_elem(t_list **stack);
 void	handle_two_elem(t_list **stack_a);
 void	more_three_elem(t_list **stack_a, t_list **stack_b, int size_stack);
+void	more_six_elems(t_list **stack_a, t_list **stack_b, int size_stack);
 void	stack_reduction(t_list **stack_a, t_list **stack_b, int *size_stack,
 		int msg);
 void	stack_reduction_b(t_list **stack_a, t_list **stack_b, int *size_stack,
@@ -47,5 +48,10 @@ void	find_minmax(t_list **stack, int minmax);
 void	more_hundred_elem(t_list **stack_a, t_list **stack_b, int size_stack);
 void	more_five_hundred_elem(t_list **stack_a, t_list **stack_b, int size_stack);
 void	select_what_todo(t_list **stack_a, t_list **stack_b, int position);
+void	set_position(t_list **stack);
+void	botmove_stack_b(t_list **stack_b, int position, int steps,
+		int direction);
+void	topmove_stack_b(t_list **stack_b, int position, int steps,
+		int direction);
 
 #endif

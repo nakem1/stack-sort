@@ -1,19 +1,15 @@
-
 #!/bin/zsh
-
-NUMBERS1=500
 
 # variables
 PUSH_SWAP=push_swap
 CHECKER=checker
 TEMPFILE=resulttempfile.txt;
 RECOMPILE=0;
-ERRORS=tempfile.txt
+ERRORS=errorstempfile.txt
 
 # unchanging variables
 YESNO=0;
 A=;
-A1=;
 RED='\033[0;31m';
 WHITE='\033[1m';
 CLN='\033[0m';
@@ -70,10 +66,10 @@ elif [ "$#" -eq 2 ]; then
     echo ${WHITE}${LOOPS}${CLN} "loops";
     echo ${WHITE}${NUMBERS}${CLN} "random numbers each";
 else
-	NUMBERS=350;
-	LOOPS=50;
-    echo ${WHITE}${NUMBERS1}${CLN} "random numbers";
-    echo ${WHITE}${LOOPS}${CLN} "loops";
+   	echo "usage (default ${WHITE}2${CLN} numbers and ${WHITE}1${CLN} loop): sh pushchecker.sh [NUMBER] [LOOPS]";
+   	echo "      script can check: 3, 5, 100, 500 with warnings"
+	NUMBERS=2;
+	LOOPS=1;
 fi
 
 #recompile project before run?
@@ -98,12 +94,10 @@ while [ ${LOOPS} -gt 0 ]; do
             ((YESNO++));
         fi
     done
-    for (( i=1; i <= ${NUMBERS1}; i++ )) do
-      printf %s  $((RANDOM%${RANGENUM}+0))" ";
-    done
+
     # main body
+    echo "\n"${A}"\n";
     ./push_swap ${A} > ${TEMPFILE};
-    echo "    "
     echo "-----------------------";
     echo "test #" $((TESTNUM++))
     echo "operations: \c";
@@ -193,10 +187,22 @@ while [ ${LOOPS} -gt 0 ]; do
 done
 
 echo "\nfinal result (${LOOPSCOUNT} loops): \c";
-echo ${WHITE}"GOOD"${CLN};
+if [ ${WRONGCOUNT} -eq 0 ]; then
+    if [ ${SORTCOUNTERKO} -eq 0 ]; then
+        echo ${WHITE}"GOOD"${CLN};
+        rm ${ERRORS};
+    else
+        echo ${RED}"BAD"${CLN};
+    fi;
+else
+    echo ${RED}"BAD"${CLN};
+fi
 
 if [ ${LOOPSCOUNT} -gt 1 ]; then
+    echo "operations:       ${OKCOUNT} OK / ${WRONGCOUNT} Wrong";
     echo "sorting:          ${SORTCOUNTEROK} OK / ${SORTCOUNTERKO} KO";
+    echo "max (operations): ${MAXNUMBER}";
+    echo "min (operations): ${MINNUMBER}";
     echo "med (operations): $((MEDIUM/LOOPSCOUNT))"
 fi
 exit 0

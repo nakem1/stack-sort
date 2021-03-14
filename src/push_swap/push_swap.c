@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/05 17:55:51 by lmurray           #+#    #+#             */
-/*   Updated: 2021/03/13 07:45:24 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/03/14 03:55:26 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,10 @@ void	push_swap(t_list **stack_a)
 			handle_two_elem(stack_a);
 		else if (size_stack == 3)
 			handle_three_elem(stack_a);
-		else if (size_stack > 3 && size_stack < 100)
+		else if (size_stack > 3 && size_stack < 7)
 			more_three_elem(stack_a, &stack_b, size_stack);
+		else if (size_stack >= 7 && size_stack < 90)
+			more_six_elems(stack_a, &stack_b, size_stack);
 		else if (size_stack >= 100 && size_stack < 500)
 			more_hundred_elem(stack_a, &stack_b, size_stack);
 		else if (size_stack >= 500)
@@ -34,6 +36,7 @@ void	push_swap(t_list **stack_a)
 	}
 }
 // проверить дебаггером на малых числах алгоритм. И закончить проект
+// font size 13
 int		main(int argc, char **argv)
 {
 	int		*digits;

@@ -6,11 +6,26 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/05 19:05:51 by lmurray           #+#    #+#             */
-/*   Updated: 2021/03/11 15:00:27 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/03/14 04:08:43 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+void		set_position(t_list **stack)
+{
+	int		i;
+	t_list	*tmp;
+
+	i = 0;
+	tmp = *stack;
+	while (tmp)
+	{
+		tmp->position = i;
+		i++;
+		tmp = tmp->next;
+	}
+}
 
 void		handle_two_elem(t_list **stack_a)
 {

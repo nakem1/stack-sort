@@ -6,7 +6,7 @@
 #    By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/12 20:04:19 by lmurray           #+#    #+#              #
-#    Updated: 2021/03/13 06:31:13 by lmurray          ###   ########.fr        #
+#    Updated: 2021/03/14 04:12:19 by lmurray          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ SRC_PS = ./src/push_swap/find_optimal.c ./src/push_swap/handler_elems.c \
 		./src/push_swap/handler_elems_utils.c \
 		./src/push_swap/more_five_hundred_elem.c \
 		./src/push_swap/more_hundred_elem.c \
-		./src/push_swap/more_three_elem.c ./src/push_swap/push_swap.c \
+		./src/push_swap/more_six_elems.c ./src/push_swap/push_swap.c \
 		./src/push_swap/optimization.c
 
 SRC = ./src/operations/push.c ./src/operations/reverse_rotate.c \

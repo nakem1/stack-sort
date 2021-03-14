@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/30 02:59:31 by lmurray           #+#    #+#             */
-/*   Updated: 2021/03/11 04:39:54 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/03/14 02:56:41 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ typedef struct		s_list
 	struct s_list	*next;
 	int				flag;
 	int				index;
+	int				position;
 }					t_list;
 
 void				*ft_memset(void *s, int c, size_t n);
@@ -108,5 +109,6 @@ int					get_next_line(int fd, char **line);
 char				*ft_allocate_join(unsigned int n, unsigned m, \
 		char const *s1, char const *s2);
 void				print_matrix(char **map, int size);
+t_list				**norm_a;
 
 #endif

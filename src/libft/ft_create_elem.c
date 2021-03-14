@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 18:30:56 by lmurray           #+#    #+#             */
-/*   Updated: 2021/03/11 17:40:58 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/03/14 02:57:04 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ t_list	*ft_create_elem(void *content)
 		tmp->content = content;
 		tmp->flag = 0;
 		tmp->index = 0;
+		tmp->position = 0;
 		tmp->next = NULL;
 	}
 	return (tmp);

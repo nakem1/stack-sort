@@ -38,6 +38,12 @@
 			"type": "shell",
 			"command": "make",
 			"group": "build"
-		}
+		},
+		{
+			"label": "re",
+			"type": "shell",
+			"command": "make re",
+			"group": "build"
+		},
 	]
 }
