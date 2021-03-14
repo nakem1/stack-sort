@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/11 02:45:08 by lmurray           #+#    #+#             */
-/*   Updated: 2021/03/14 04:11:48 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/03/14 22:22:20 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,6 @@ void		stack_reduction_simple(t_list **stack_a, t_list **stack_b,
 		tmp = tmp->next;
 	}
 	push(stack_a, stack_b, "pb\n");
-	print_list(*stack_a, *stack_b);
 	*size_stack -= 1;
 }
 
@@ -57,10 +56,8 @@ void		more_three_elem(t_list **stack_a, t_list **stack_b, int size_stack)
 		reset_flag(stack_a);
 		find_minmax(stack_a, MIN);
 		find_minmax(stack_a, MAX);
-		print_list(*stack_a, *stack_b);
 		stack_reduction_simple(stack_a, stack_b, &size_stack);
 	}
-	print_list(*stack_a, *stack_b);
 	handle_three_elem(stack_a);
 	astack_recovery(stack_a, stack_b);
 }

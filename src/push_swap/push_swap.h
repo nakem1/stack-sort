@@ -6,12 +6,12 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/05 17:56:41 by lmurray           #+#    #+#             */
-/*   Updated: 2021/03/14 06:19:59 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/03/14 22:14:54 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP
-# define PUSH_SWAP
+#ifndef PUSH_SWAP_H
+# define PUSH_SWAP_H
 
 # include "../operations/operations.h"
 # include "../parse/parse.h"
@@ -23,9 +23,6 @@
 # define REV_ROTATE 3
 # define TOP 1
 # define BOTTOM 2
-// # define PUSH_STACK(msg) ((msg) == 1 ? ("pb\n") : ("pa\n"))
-// # define ROTATE_STACK(msg) ((msg) == 1 ? ("ra\n") : ("rb\n"))
-// # define REV_ROTATE_STACK(msg) ((msg == 1 ? ("rra\n") : ("rrb\n")))
 
 # define MIN 1
 # define MAX 2
@@ -46,7 +43,8 @@ void	reset_flag(t_list **stack);
 void	find_optimal(int *heaps, int size_heaps, t_list **stack_a);
 void	find_minmax(t_list **stack, int minmax);
 void	more_hundred_elem(t_list **stack_a, t_list **stack_b, int size_stack);
-void	more_five_hundred_elem(t_list **stack_a, t_list **stack_b, int size_stack);
+void	more_five_hundred_elem(t_list **stack_a, t_list **stack_b,
+		int size_stack);
 void	select_what_todo(t_list **stack_a, t_list **stack_b, int position);
 void	set_position(t_list **stack);
 void	botmove_stack_b(t_list **stack_b, int position, int steps,

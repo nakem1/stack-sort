@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 20:36:32 by lmurray           #+#    #+#             */
-/*   Updated: 2021/03/11 06:23:53 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/03/14 20:59:33 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,6 +82,8 @@ int		main(int argc, char **argv)
 
 	if (argc > 1)
 	{
+		if (argc == 2)
+			argv = parse_str(&argc, argv[1]);
 		if (!(digits = parse(argc, argv)))
 			stop_program(1);
 		stack_a = get_stack(argc, digits);

@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/30 02:59:31 by lmurray           #+#    #+#             */
-/*   Updated: 2021/03/14 02:56:41 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/03/14 22:18:59 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ typedef struct		s_list
 	int				index;
 	int				position;
 }					t_list;
+
+t_list				**g_norm_a;
 
 void				*ft_memset(void *s, int c, size_t n);
 void				ft_bzero(void *s, size_t n);
@@ -72,7 +74,7 @@ int					ft_tolower(int c);
 char				*ft_strjoin(const char *s1, const char *s2);
 char				*ft_strtrim(const char *s1, const char *set);
 char				*ft_substr(const char *s, unsigned int start, size_t len);
-char				**ft_split(char const *s, char c);
+char				**ft_split(char *s, char c);
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char				*ft_itoa(int n);
 void				ft_putchar_fd(char c, int fd);
@@ -109,6 +111,5 @@ int					get_next_line(int fd, char **line);
 char				*ft_allocate_join(unsigned int n, unsigned m, \
 		char const *s1, char const *s2);
 void				print_matrix(char **map, int size);
-t_list				**norm_a;
 
 #endif

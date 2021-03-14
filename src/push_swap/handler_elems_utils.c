@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/07 01:40:07 by lmurray           #+#    #+#             */
-/*   Updated: 2021/03/14 05:25:26 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/03/14 22:09:39 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -138,29 +138,3 @@ void		stack_reduction(t_list **stack1, t_list **stack2, int *size_stack,
 	push(stack1, stack2, get_str_operation(PUSH, msg));
 	*size_stack -= 1;
 }
-
-// void		stack_reduction_b(t_list **stack1, t_list **stack2, int *size_stack,
-// 		int msg)
-// {
-// 	int		i;
-// 	int		flag_find;
-// 	t_list	*tmp;
-
-// 	i = 0;
-// 	flag_find = 0;
-// 	if (!check_one_flag(stack1))
-// 		find_min_dist(stack1, *size_stack);
-// 	tmp = *stack1;
-// 	while (flag_find != 1)
-// 	{
-// 		if (tmp->flag == 1)
-// 		{
-// 			select_how_gotop(stack1, *size_stack, i, msg);
-// 			flag_find = 1;
-// 		}
-// 		i++;
-// 		tmp = tmp->next;
-// 	}
-// 	push(stack1, stack2, PUSH_STACK(msg));
-// 	*size_stack -= 1;
-// }

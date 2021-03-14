@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lmurray <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/30 23:26:12 by lmurray           #+#    #+#             */
-/*   Updated: 2020/11/12 09:56:14 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/03/14 21:09:58 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,7 +113,7 @@ static char			*allocate_and_fill_elem(char *str, char *s, char c, int i)
 ** ended by a NULL pointer.
 */
 
-char				**ft_split(char const *s, char c)
+char				**ft_split(char *s, char c)
 {
 	int		i;
 	int		count_words;

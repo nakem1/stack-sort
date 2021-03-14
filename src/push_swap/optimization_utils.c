@@ -6,11 +6,11 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/14 06:12:44 by lmurray           #+#    #+#             */
-/*   Updated: 2021/03/14 06:18:50 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/03/14 22:18:59 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.c"
+#include "push_swap.h"
 
 void		topmove_stack_b(t_list **stack_b, int position, int steps,
 		int direction)
@@ -25,7 +25,7 @@ void		topmove_stack_b(t_list **stack_b, int position, int steps,
 			if (steps-- > 0)
 			{
 				rotate(stack_b, "rr\n");
-				rotate(norm_a, NULL);
+				rotate(g_norm_a, NULL);
 			}
 			else
 				rotate(stack_b, "rb\n");
@@ -53,7 +53,7 @@ void		botmove_stack_b(t_list **stack_b, int position, int steps,
 			if (steps-- > 0)
 			{
 				reverse_rotate(stack_b, "rrr\n");
-				reverse_rotate(norm_a, NULL);
+				reverse_rotate(g_norm_a, NULL);
 			}
 			else
 				reverse_rotate(stack_b, "rrb\n");

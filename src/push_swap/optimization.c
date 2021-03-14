@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/12 20:04:43 by lmurray           #+#    #+#             */
-/*   Updated: 2021/03/14 06:21:34 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/03/14 22:19:42 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,9 +105,8 @@ void		select_what_todo(t_list **stack_a, t_list **stack_b,
 	int		direction;
 	int		steps;
 
-	norm_a = stack_a;
+	g_norm_a = stack_a;
 	size_stack_a = ft_list_size(*stack_a);
-	//
 	if (position < (size_stack_a / 2))
 	{
 		steps = position;
