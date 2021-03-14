@@ -70,7 +70,7 @@ elif [ "$#" -eq 2 ]; then
     echo ${WHITE}${LOOPS}${CLN} "loops";
     echo ${WHITE}${NUMBERS}${CLN} "random numbers each";
 else
-	NUMBERS=350;
+	NUMBERS=330;
 	LOOPS=50;
     echo ${WHITE}${NUMBERS1}${CLN} "random numbers";
     echo ${WHITE}${LOOPS}${CLN} "loops";
