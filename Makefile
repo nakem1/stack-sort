@@ -6,7 +6,7 @@
 #    By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/12 20:04:19 by lmurray           #+#    #+#              #
-#    Updated: 2021/03/14 20:33:10 by lmurray          ###   ########.fr        #
+#    Updated: 2021/04/24 12:35:22 by lmurray          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,6 +15,8 @@ CH=	checker
 PS=	push_swap
 LIBFT = ./src/libft/libft.a
 
+MAIN_CH = ./src/checker/main_checker.c
+MAIN_PS = ./src/push_swap/main_push_swap.c
 SRC_CH = ./src/checker/checker.c
 SRC_PS = ./src/push_swap/find_optimal.c ./src/push_swap/handler_elems.c \
 		./src/push_swap/handler_elems_utils.c \
@@ -55,4 +57,4 @@ cowsay:
 
 re:	fclean all
 
-.PHONY: clean fclean all re cowsay
+.PHONY: clean fclean all re cowsay bonus

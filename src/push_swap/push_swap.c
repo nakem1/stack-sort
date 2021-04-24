@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/05 17:55:51 by lmurray           #+#    #+#             */
-/*   Updated: 2021/03/14 22:35:40 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/04/24 12:30:54 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,24 +34,4 @@ void	push_swap(t_list **stack_a)
 		else if (size_stack >= 500)
 			more_five_hundred_elem(stack_a, &stack_b, size_stack);
 	}
-}
-
-int		main(int argc, char **argv)
-{
-	int		*digits;
-	t_list	*stack_a;
-
-	if (argc > 1)
-	{
-		if (argc == 2)
-			argv = parse_str(&argc, argv[1]);
-		if (!(digits = parse(argc, argv)))
-			stop_program(1);
-		stack_a = get_stack(argc, digits);
-		if (!check_stack(stack_a, NULL))
-			return (0);
-		push_swap(&stack_a);
-		free(digits);
-	}
-	return (0);
 }

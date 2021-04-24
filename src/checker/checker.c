@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 20:36:32 by lmurray           #+#    #+#             */
-/*   Updated: 2021/03/14 22:37:09 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/04/24 12:31:33 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,21 +73,4 @@ void	checker(t_list **stack_a)
 		stop_program(2);
 	else
 		stop_program(0);
-}
-
-int		main(int argc, char **argv)
-{
-	int		*digits;
-	t_list	*stack_a;
-
-	if (argc > 1)
-	{
-		if (argc == 2)
-			argv = parse_str(&argc, argv[1]);
-		if (!(digits = parse(argc, argv)))
-			stop_program(1);
-		stack_a = get_stack(argc, digits);
-		checker(&stack_a);
-	}
-	return (0);
 }

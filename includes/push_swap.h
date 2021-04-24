@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/05 17:56:41 by lmurray           #+#    #+#             */
-/*   Updated: 2021/03/14 22:14:54 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/04/24 12:27:53 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,5 +51,6 @@ void	botmove_stack_b(t_list **stack_b, int position, int steps,
 		int direction);
 void	topmove_stack_b(t_list **stack_b, int position, int steps,
 		int direction);
+void	push_swap(t_list **stack_a);
 
 #endif
