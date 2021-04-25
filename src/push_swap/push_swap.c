@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/05 17:55:51 by lmurray           #+#    #+#             */
-/*   Updated: 2021/03/14 22:35:40 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/04/25 22:40:37 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ int		main(int argc, char **argv)
 	int		*digits;
 	t_list	*stack_a;
 
+	g_flag = FLAG;
 	if (argc > 1)
 	{
 		if (argc == 2)

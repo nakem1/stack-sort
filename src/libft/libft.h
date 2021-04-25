@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/30 02:59:31 by lmurray           #+#    #+#             */
-/*   Updated: 2021/03/14 22:18:59 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/04/25 22:40:30 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@
 # include <stdio.h>
 
 # define BUFFER_SIZE 64
+
+int					g_flag;
 
 typedef struct		s_list
 {

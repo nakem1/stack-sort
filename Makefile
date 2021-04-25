@@ -6,7 +6,7 @@
 #    By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/12 20:04:19 by lmurray           #+#    #+#              #
-#    Updated: 2021/03/14 20:33:10 by lmurray          ###   ########.fr        #
+#    Updated: 2021/04/25 22:34:13 by lmurray          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,12 +36,18 @@ $(LIBFT):
 
 $(CH): $(SRC) $(SRC_CH)
 	@cowsay -f tux "CHECKER WELL DONE!"
-	@$(GCC) -Wall -Werror -Wextra -o $(CH) $(SRC_CH) $(SRC) $(LIBFT)
+	@$(GCC) -Wall -Werror -Wextra -o $(CH) $(SRC_CH) $(SRC) $(LIBFT) -D FLAG=0
 	@echo "\n"
 $(PS): $(SRC) $(SRC_PS)
 	@cowsay -f dragon "EEEEEEE PUSH_SWAP IS READY"
-	@$(GCC) -Wall -Werror -Wextra -o $(PS) $(SRC_PS) $(SRC) $(LIBFT)
+	@$(GCC) -Wall -Werror -Wextra -o $(PS) $(SRC_PS) $(SRC) $(LIBFT) -D FLAG=0
 	@echo "\n"
+
+bonus: $(LIBFT) $(CH)
+	@cowsay -f milk "BONUS"
+	@$(GCC) -Wall -Werror -Wextra -o $(PS) $(SRC_PS) $(SRC) $(LIBFT) -D FLAG=1
+	@echo "\n"
+
 clean:
 	@make clean -C ./src/libft/
 

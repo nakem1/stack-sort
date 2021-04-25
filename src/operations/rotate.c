@@ -6,7 +6,7 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/05 01:32:39 by lmurray           #+#    #+#             */
-/*   Updated: 2021/03/14 22:05:28 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/04/25 22:40:51 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,4 +25,6 @@ void		rotate(t_list **stack, char *msg)
 		if (msg)
 			ft_putstr_fd(msg, 1);
 	}
+	if (g_flag == 1)
+		print_list(*stack, NULL);
 }
