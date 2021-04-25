@@ -6,12 +6,11 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/06 22:34:35 by lmurray           #+#    #+#             */
-/*   Updated: 2021/03/14 04:25:09 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/04/25 15:20:13 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include <stdio.h>
 
 void		reset_flag(t_list **stack)
 {

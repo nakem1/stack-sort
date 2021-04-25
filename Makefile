@@ -6,7 +6,7 @@
 #    By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/12 20:04:19 by lmurray           #+#    #+#              #
-#    Updated: 2021/04/24 12:35:22 by lmurray          ###   ########.fr        #
+#    Updated: 2021/04/25 15:03:53 by lmurray          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,6 +17,7 @@ LIBFT = ./src/libft/libft.a
 
 MAIN_CH = ./src/checker/main_checker.c
 MAIN_PS = ./src/push_swap/main_push_swap.c
+MAIN_BONUS = ./src/main_bonus.c
 SRC_CH = ./src/checker/checker.c
 SRC_PS = ./src/push_swap/find_optimal.c ./src/push_swap/handler_elems.c \
 		./src/push_swap/handler_elems_utils.c \
@@ -38,14 +39,19 @@ $(LIBFT):
 
 $(CH): $(SRC) $(SRC_CH)
 	@cowsay -f tux "CHECKER WELL DONE!"
-	@$(GCC) -Wall -Werror -Wextra -o $(CH) $(SRC_CH) $(SRC) $(LIBFT)
+	@$(GCC) -Wall -Werror -Wextra -o $(CH) $(MAIN_CH) $(SRC_CH) $(SRC) $(LIBFT) -I ./includes
 	@echo "\n"
 $(PS): $(SRC) $(SRC_PS)
 	@cowsay -f dragon "EEEEEEE PUSH_SWAP IS READY"
-	@$(GCC) -Wall -Werror -Wextra -o $(PS) $(SRC_PS) $(SRC) $(LIBFT)
+	@$(GCC) -Wall -Werror -Wextra -o $(PS) $(MAIN_PS) $(SRC_PS) $(SRC) $(LIBFT) -I ./includes
 	@echo "\n"
 clean:
 	@make clean -C ./src/libft/
+
+bonus: $(LIBFT)
+	@cowsay -f milk "IT's a BONUSSS"
+	@$(GCC) -Wall -Werror -Wextra -o bonus $(MAIN_BONUS) $(SRC_CH) $(SRC_PS) $(SRC) $(LIBFT)
+	@echo "\n"
 
 fclean:	clean
 	@rm -f $(CH)

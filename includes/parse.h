@@ -6,14 +6,14 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 20:56:42 by lmurray           #+#    #+#             */
-/*   Updated: 2021/03/14 22:09:13 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/04/25 15:05:10 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PARSE_H
 # define PARSE_H
 
-# include "../libft/libft.h"
+# include "libft.h"
 
 int			*parse(int argc, char **argv);
 char		**parse_str(int *argc, char *str);

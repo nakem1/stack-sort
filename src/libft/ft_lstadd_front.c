@@ -6,11 +6,10 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/05 00:31:31 by lmurray           #+#    #+#             */
-/*   Updated: 2021/03/04 19:48:50 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/04/25 15:20:15 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
 /*

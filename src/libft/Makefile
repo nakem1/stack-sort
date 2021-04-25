@@ -72,7 +72,7 @@ $(NAME): $(OBJ)
 	@$(LIB) $(NAME) $(OBJ)
 
 $(OBJ): $(SRC)
-	@gcc $(FLAGS) $(SRC)
+	@gcc $(FLAGS) $(SRC) -I ../../includes
 
 clean:
 	@rm -f $(OBJ)

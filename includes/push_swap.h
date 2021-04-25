@@ -6,15 +6,15 @@
 /*   By: lmurray <lmurray@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/05 17:56:41 by lmurray           #+#    #+#             */
-/*   Updated: 2021/04/24 12:27:53 by lmurray          ###   ########.fr       */
+/*   Updated: 2021/04/25 16:14:31 by lmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-# include "../operations/operations.h"
-# include "../parse/parse.h"
+# include "operations.h"
+# include "parse.h"
 
 # define A_STACK 1
 # define B_STACK 2

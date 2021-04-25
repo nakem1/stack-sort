@@ -174,10 +174,9 @@
 			"name": "(lldb) Запустить",
 			"type": "lldb",
 			"request": "launch",
-			"program": "${workspaceFolder}/push_swap",
+			"program": "${workspaceFolder}/src/a.out",
 			"args": 
 			[
-				"5 3 2 56 6 2",
 			],
 			"stopAtEntry": false,
 			"cwd": "${workspaceFolder}",
@@ -189,7 +188,7 @@
 			"name": "(lldb) Подключить",
 			"type": "lldb",
 			"request": "attach",
-			"program": "${workspaceFolder}/push_swap}",
+			"program": "${workspaceFolder}/src/a.out",
 			"processId": "${command:pickProcess}",
 			"MIMode": "lldb"
 		}
