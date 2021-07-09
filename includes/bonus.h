@@ -15,11 +15,6 @@
 
 # include "push_swap.h"
 # include "checker.h"
-// # include <stdio.h>
-// # include <stdlib.h>
-// # include <string.h>
-// # include <readline/readline.h>
-// # include <readline/history.h>
 # include <ncurses.h>
 # include "push_swap.h"
 # include "checker.h"

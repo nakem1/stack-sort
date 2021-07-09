@@ -10,7 +10,7 @@
 #                                                                              #
 # **************************************************************************** #
 
-GCC = gcc -g3
+GCC = gcc -O2
 CH=	checker
 PS=	push_swap
 LIBFT = ./src/libft/libft.a

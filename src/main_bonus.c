@@ -10,29 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include		"bonus.h"
-
-// int			main(void)
-// {
-// 	char		*buf;
-
-// 	while (1)
-// 	{
-// 		buf = readline("testcli_readline> ");
-// 		// if (ft_strlen(buf) > 0)
-// 		// 	add_history(buf);
-// 		if (!ft_strcmp(buf, "mekan"))
-// 			system("echo hi mekan");
-// 		else if(!ft_strcmp(buf, "date"))
-// 			system("date");
-// 		else if (!ft_strcmp(buf, "exit") || !ft_strcmp(buf, "quit") || \
-// 				!ft_strcmp(buf, "q"))
-// 			break ;
-// 	}
-// 	printf("\e[1;34mHello\n");
-// 	return (0);
-// }
-
 #include "bonus.h"
 
 void	get_prompt(char *msg, int forground, int background)
